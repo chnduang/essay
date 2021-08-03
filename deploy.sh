@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 # 确保脚本抛出遇到的错误
 set -e
+# 清楚缓存
 npm cache verify
 yarn
 yarn build # 生成静态文件
@@ -9,14 +10,14 @@ echo "build successful"
 
 cd docs/.vuepress/dist # 进入生成的文件夹
 
-echo 'note.qdzhou.cn' > CNAME
+echo 'essay.qdzhou.cn' > CNAME
 # deploy to github
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
-  githubUrl=git@github.com:ZQD1224/note.git
+  githubUrl=git@github.com:ZQD1224/essay.git
 else
   msg='来自github action的自动部署'
-  githubUrl=https://ZQD1224:${GITHUB_TOKEN}@github.com/ZQD1224/note.git
+  githubUrl=https://ZQD1224:${GITHUB_TOKEN}@github.com/ZQD1224/essay.git
   git config --global user.name "zhouqd"
   git config --global user.email "zhouqd1997@163.com"
 fi
