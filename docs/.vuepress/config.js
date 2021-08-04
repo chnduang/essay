@@ -85,6 +85,7 @@ const base = "/";
 
 const nav = [
   { text: "博客", link: "https://note.qdzhou.cn/" },
+  { text: "TS", link: "/typescript/" },
   {
     text: "JS",
     link: "/javascript/",
@@ -120,7 +121,7 @@ const nav = [
 ];
 
 module.exports = {
-  title: "qd blog",
+  title: "qd 随笔",
   description: "qd前端相关知识总结",
   base,
   port: 9199,
