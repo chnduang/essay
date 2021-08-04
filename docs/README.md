@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /header.jpg
-heroText: qd 的随笔
+heroText: duangdong的随笔
 tagline: 总结和完善前端知识体系
 actionText: 快速上手 →
 actionLink: /javascript/
