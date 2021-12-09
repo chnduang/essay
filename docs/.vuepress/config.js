@@ -84,7 +84,6 @@ const base = "/";
 // const base = '/note/';
 
 const nav = [
-  { text: "博客", link: "https://note.qdzhou.cn/" },
   { text: "TS", link: "/typescript/" },
   {
     text: "JS",
@@ -116,15 +115,18 @@ const nav = [
   { text: "CSS", link: "/c3/" },
   { text: "可视化", link: "/visual/" },
   { text: "Vue", link: "/vue/" },
+  { text: "Angular", link: "/angular/" },
   { text: "小程序", link: "/mini-program/" },
   { text: "随笔", link: "/other/" },
+  { text: "Home", link: "https://link.qdzhou.cn/" },
 ];
 
 module.exports = {
   title: "duangdong随笔",
   description: "前端相关知识归纳总结",
   base,
-  port: 9199,
+  host: "localhost",
+  port: 9203,
   head: [
     ["link", { rel: "icon", href: "/logo.png" }],
     ["link", { rel: "manifest", href: "/manifest.json" }],
@@ -150,9 +152,22 @@ module.exports = {
         updatePopup: true,
       },
     ],
+    [
+      "vuepress-plugin-right-anchor",
+      {
+        showDepth: 3,
+        ignore: ["/", "/api/"],
+        expand: {
+          trigger: "click",
+          clickModeDefaultOpen: true,
+        },
+        customClass: "your-customClass",
+        disableGlobalUI: false,
+      },
+    ],
   ],
   themeConfig: {
-    sidebarDepth: 2,
+    sidebarDepth: 0,
     searchMaxSuggestions: 10,
     lastUpdated: "上次更新",
     editLinks: true,
