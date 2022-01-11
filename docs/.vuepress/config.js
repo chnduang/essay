@@ -84,7 +84,6 @@ const base = "/";
 // const base = '/note/';
 
 const nav = [
-  { text: "TS", link: "/typescript/" },
   {
     text: "JS",
     link: "/javascript/",
@@ -114,6 +113,7 @@ const nav = [
   },
   { text: "CSS", link: "/c3/" },
   { text: "可视化", link: "/visual/" },
+  { text: "开发技巧", link: "/skill/" },
   { text: "Vue", link: "/vue/" },
   { text: "Angular", link: "/angular/" },
   { text: "小程序", link: "/mini-program/" },
